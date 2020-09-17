@@ -2,14 +2,14 @@
 
 __Author__ = 'Seenming'
 
-
 import tornado.web
 import tornado.ioloop
+from apps.urls import urls
 
 
 class App(tornado.web.Application):
     def __init__(self, **settings):
-        handlers = []
+        handlers = urls
         super().__init__(handlers, **settings)
 
 
